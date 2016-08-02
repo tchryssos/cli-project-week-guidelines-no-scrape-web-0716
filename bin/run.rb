@@ -1,3 +1,3 @@
-require_relative '../config/environment'
+require_relative '../app/runners/weather_cli.rb'
 
-ExampleCLI.new.call
+WeatherCLI.new.call
