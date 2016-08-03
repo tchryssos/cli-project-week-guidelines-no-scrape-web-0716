@@ -8,3 +8,7 @@ end
 group "test" do
   gem "rspec"
 end
+
+group "design" do
+  gem "colorize"
+end

@@ -1,13 +1,14 @@
 require 'pry'
 require_relative '../data_fetchers/weather_api_caller.rb'
 require_relative '../models/weather_report.rb'
+require 'colorize'
 
 class WeatherCLI
 
   def call
-    puts "Welcome to Cli's Weather Service."
-    puts "Enter the name of a city to see the current weather"
-    puts "or type 'help' to see other options"
+    puts "Welcome to Cli's Weather Service.".magenta
+    puts "Enter the name of a city to see the current weather and a three day forecast."
+    puts "or type "+"'help'".red + " to see other options"
     run
   end
 
@@ -39,14 +40,16 @@ class WeatherCLI
   def help
     puts
     puts "Type a city name to get a weather report for that city"
-    puts "Type 'help' to view this menu again"
-    puts "Type 'exit' to exit"
+    puts "Type "+"'help'".red + " to view this menu again"
+    puts "Type "+"'exit'".blue + " to exit"
     puts
   end
 
   def exit_program
     puts
-    puts "Thanks for visiting Cli's Weather Service!"
+    puts "Thanks for visiting Cli's Weather Service!".magenta
+    puts
+    puts
     exit
   end
 end
